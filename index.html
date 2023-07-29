@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+   <div id="modal-container">
+        <div id="modal-content">
+            <h2>Datenschutz-Einwilligung</h2>
+            <p>Um Ihnen den bestmöglichen Service bieten zu können, verwenden wir Cookies. Durch die Nutzung unserer Website erklären Sie sich damit einverstanden. Weitere Informationen finden Sie in unserer Datenschutzrichtlinie.</p>
+            <button id="accept-btn">Ich stimme zu</button>
+        </div>
+    </div>
+
     <header class="header">
        <div class="hi"><H1>Guten Tag! Es ist nur ein paar Beispiele von Funktionalität, die ich mit JavaScript realisieren kann.</H1>
        </div>
@@ -102,44 +110,50 @@
 </div>
 
 <div class="third">
-      <div class="title"><h1>3. TABS</h1></div>
-      <div class="third-content">
-        <div class="tabs-nav">
-        <button data-tab="tab1" class="button-nav active" autofocus type="button"><H1>TAB 1</H1></button>
-        <button data-tab="tab2" class="button-nav"  type="button"><H1>TAB 2</H1></button>
-        <button data-tab="tab3" class="button-nav"  type="button"><H1>TAB 3</H1></button>
-      </div>
-    <div class="tabs">
-        <div class="tab " data-tab-content id="tab1">
-            <p>const tabHeaders = document.querySelectorAll("[data-tab]");<br> 
-            const tabContent = document.querySelectorAll("[data-tab-content]");<br></br>
-            
-             tabHeaders.forEach(function (item) {<br> 
-             item.addEventListener("click", function () {<br></br> 
-                
-                    tabContent.forEach(function (item) {<br> 
-                        item.classList.add("hidden");<br></br> 
-                        
-                    })<br> 
-                    const contentBox = document.querySelector("#" + this.dataset.tab);<br> 
-                    contentBox.classList.remove("hidden");<br>
-                })
-            })</p></div>
-
-         <div class="tab hidden" data-tab-content id="tab2">
-            <p>const tabHeaders = document.querySelectorAll("[data-tab]");<br> 
-            const tabContent = document.querySelectorAll("[data-tab-content]");<br></br>
-            </p></div> 
-
-        <div class="tab hidden" data-tab-content id="tab3"><p>njsadjks andjnasndkja
-                nklfammklfmkld afmkladmflamfla afknlsfl nafnkjan ankjdasnfkjasfkjas fnkjafk janfna
-                sndkjasndasnkdn</p></div>
-          
-        
-    </div>
+    <div class="title">
+  <h1>3. TABS</h1>
 </div>
 
-   </div>    
-   <script src="..//js/JavaScript.js"> </script>
+<div class="third-content">
+  <div class="tabs-nav">
+    <button data-tab="tab1" class="button-nav fo" autofocus type="button"><h1>TAB 1</h1></button>
+    <button data-tab="tab2" class="button-nav" type="button"><h1>TAB 2</h1></button>
+    <button data-tab="tab3" class="button-nav" type="button"><h1>TAB 3</h1></button>
+  </div>
+  <div class="tabs">
+   <div class="tab " data-tab-content id="tab1">
+  <p>Content for Tab 1</p>
+</div>
+
+<div class="tab hidden" data-tab-content id="tab2">
+  <p>Content for Tab 2</p>
+</div>
+
+<div class="tab hidden" data-tab-content id="tab3">
+  <p>Content for Tab 3</p>
+</div>
+  </div>
+</div>
+
+
+ <div class="title"><h1>3. FORM</h1></div>
+    <form id="contactForm" action="send_email.php" method="POST">
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <label for="phoneNumber">Номер телефона:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        <br>
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <br>
+        <div class="button-nav"><input type="submit" value="Отправить"></div>
+    </form>
+   </div>   
+    
+   <script src="../jslernen/js/JavaScript.js"> </script>
 </body>
 </html>
