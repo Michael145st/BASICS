@@ -1,4 +1,4 @@
-html, body { height: 100%; white; overflow-x: hidden;
+html, body { height: 100%;  overflow-x: hidden;
     
 
 }
@@ -71,14 +71,15 @@ margin-top: 20px;
 }
 
 main {
-    height: 90%;
+    overflow-y: visible;
+    
     margin-left: 5%;
     margin-right: 5%;
     position: relative;
     
 }
 
-.cours-list {
+.course-list {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
@@ -92,7 +93,8 @@ main {
 }
 
 
-.cours-card {
+.course-card {
+    overflow: hidden;
     display: block;
     border-style: solid;
     border-color: #c1bcbc;
@@ -102,23 +104,26 @@ main {
     max-width: 30%;
     max-height: 300px;
     padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
    
     
 
 }
 .info {
-    margin-left: 15px;
+    padding-left: 15px;
     margin-right: 15px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
-img {max-width: 100%;}
+img {max-height: 250px; width: 100%;}
+
 .empty-Courses {width: 100vw;
 height: 30vh;position: relative; margin-top: 60px;}
 
-.cours-card + .cours-card {
-   
-    margin-left: 15px;
-}
+
 
 footer {
 display: flex;
@@ -126,6 +131,7 @@ min-width: 100%;
 background-color: black; color: white;
 height: 30%;
 padding-bottom: 20px;
+position: relative
 }
 
 .contacts {
@@ -135,7 +141,7 @@ padding-bottom: 20px;
     margin-right: 5%;
 }
 
-.con {margin-right: 20px; min-width: 36px; display: block; }
+.con {width: 35px; margin-left: 10px;}
 
 .footer-links {width: 100%;
   justify-content: space-between;
@@ -143,7 +149,8 @@ padding-bottom: 20px;
     display: flex;
     margin-right: 10%;
 }
-.title {margin-top: 1px; font-size: 50px;}
+.title {margin-top: 1px; font-size: 50px;
+margin-left: 15px;}
 
 
 .ul-f {
@@ -154,3 +161,6 @@ padding-bottom: 20px;
     
     
 }
+
+.foto {max-height: 250px;
+content: cover;}
