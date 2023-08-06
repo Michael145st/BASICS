@@ -117,7 +117,7 @@ main {
     text-overflow: ellipsis;
     max-width: 230px;
     
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 img {max-height: 250px; width: 100%;}
