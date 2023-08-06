@@ -28,7 +28,7 @@ header {
  align-items: center;
  justify-content: space-between;
  height: 10%;
- margin-bottom: 30px;
+ margin-bottom: 40px;
  position: static;
 margin-top: 20px;
  }
@@ -72,7 +72,7 @@ margin-top: 20px;
 
 main {
     overflow-y: visible;
-    
+    align-content: center;
     margin-left: 5%;
     margin-right: 5%;
     position: relative;
@@ -84,11 +84,10 @@ main {
     flex-direction: row;
     margin-top: 30px;
     flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
     
-    justify-items: space between;
-    justify-content: space-between;
+    
+    
+    justify-content: flex-start;
     
 }
 
@@ -104,18 +103,21 @@ main {
     max-width: 30%;
     max-height: 300px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
-    margin-left: 15px;
+    margin-bottom: 30px;
+    margin-left: 60px;
    
     
 
 }
 .info {
     padding-left: 15px;
-    margin-right: 15px;
+    padding-right: 45px;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
+    max-width: 230px;
+    
+    margin-bottom: 10px;
 }
 
 img {max-height: 250px; width: 100%;}
@@ -150,7 +152,7 @@ position: relative
     margin-right: 10%;
 }
 .title {margin-top: 1px; font-size: 50px;
-margin-left: 15px;}
+margin-left: 60px;}
 
 
 .ul-f {

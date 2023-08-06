@@ -1,28 +1,28 @@
 
-const url = '/api/courses'; // URL на базе REST API
+const url = '/api/courses'; // URL on base REST API
 
-// Функция для выполнения метода GET
+// Function für die Methode GET
 function getCourseData() {
 fetch('https://60a3d1917c6e8b0017e27fad.mockapi.io/api/v1/food')
 .then(response => response.json())
 .then(data => {
-displayCourseData(data); // Отображение полученной информации о курсах
+displayCourseData(data); // zeigen die Information an Courses
 })
 .catch(error => {
 console.error('Ошибка:', error);
 });
 }
 
-// Функция для отображения полученной информации о курсах
+// Fuction für das Anzeigen von den kommenden Infirmationen 
 function displayCourseData(courseData) {
 const courseCardsContainer = document.getElementById('courseCardsContainer');
 courseCardsContainer.classList.add('course-list');
 
 
-// Очищаем контейнер перед отображением новых карточек
+// machen den Container lehr bevor neue Karten kommen 
 courseCardsContainer.innerHTML = '';
 
-// Создаем карточку курса для каждого элемента в полученных данных
+// erstellen course-card für jeden Element aus .JSON
 courseData.forEach(course => {
 	const courseCard = document.createElement('div');
 	courseCard.classList.add('course-card');
@@ -53,5 +53,5 @@ courseData.forEach(course => {
 });
 }
 
-// Выполняем метод GET для получения информации о курсах при загрузке страницы
+// machen die Methode-GET
 getCourseData();
