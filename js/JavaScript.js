@@ -62,7 +62,7 @@ getCourseData();
 
 const createBtn = document.getElementById("createBtn");
 const modal = document.getElementById("myModal");
-const closeBtn = document.getElementsByClassName("modal-close")[0];
+const closeBtn = document.getElementById("close");
 const form = document.querySelector("input[type='text']");
 const submitBtn = document.getElementById("submitBtn");
 
