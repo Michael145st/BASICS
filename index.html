@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-   li {
-    list-style-type: none; 
-   }
-   ul {
-    margin-left: 0; 
-    padding-left: 0; 
-   }
-  </style>
     <link rel="stylesheet" href="images/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,17 +12,44 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header class="header">
         <div class="logo">
             <a href=""><h3>Course Planet</h3></a>
         </div>
         <div class="nav">
             <button class="btn-nav1">Your Homepage</button>
-            <button class="btn-nav2">Create Course</button>
+            <button class="btn-nav2" id="createBtn">Create Course</button>
             <button class="btn-nav3">Login</button>
         </div>
+
+
+</head>
+<body>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-card">
+        <div><h4 class="create1">CREATE NEW COURSE</h4></div>
+        <h2 class="tit">Course Title</h2>
+        <input type="text" placeholder="Name" id="courseTitle">
+        
+        <h2 class="tit">Course Description</h2>
+        <input type="text" placeholder="Info" id="courseDescription">
+        
+        <h2 class="tit">Course Bild</h2>
+        <input type="text" placeholder="URL" id="courseBild">
+        
+        <button class="CREATE" id="submitBtn">CREATE</button>
+      </div>
+    </div>
+  </div>
+
     </header>
     <main>
+        </div>
+      </div>
         <div class="title"><h4>My Published Courses</h4></div>
         <div class="course-list" id="courseCardsContainer">
                 <div class="foto"><img src="images/cours1.png" alt=""></div>

@@ -55,3 +55,61 @@ courseData.forEach(course => {
 
 // machen die Methode-GET
 getCourseData();
+
+
+
+// UPDATE
+
+const createBtn = document.getElementById("createBtn");
+const modal = document.getElementById("myModal");
+const closeBtn = document.getElementsByClassName("modal-close")[0];
+const form = document.querySelector("input[type='text']");
+const submitBtn = document.getElementById("submitBtn");
+
+// offnen den Fenster on click Create-Course
+createBtn.addEventListener('click', function() {
+modal.style.display = "block";
+});
+
+// schliesen den Fenster on click kreuz
+closeBtn.addEventListener('click', function() {
+modal.style.display = "none";
+});
+
+// schliesen den Fenster on click raus
+window.addEventListener('click', function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+});
+
+
+submitBtn.addEventListener('click', function () {
+	const courseTitle = document.getElementById('courseTitle').value
+	const courseDescription = document.getElementById('courseDescription').value
+	const courseBild = document.getElementById('courseBild').value
+
+	const data = {
+		title: courseTitle,
+		description: courseDescription,
+		img:  courseBild,
+	}
+
+	
+
+	const requestOptions = {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(data),
+	}
+
+	fetch(
+		'https://60a3d1917c6e8b0017e27fad.mockapi.io/api/v1/food',
+		requestOptions
+	)
+		.then(response => response.json())
+		.then(result => console.log(result))
+		.then(submitBtn.textContent = 'gemacht')
+		.catch(error => console.log('Error:', error))
+})
+
