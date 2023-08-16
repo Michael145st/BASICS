@@ -1,6 +1,9 @@
-html, body { height: 100%;  overflow-x: hidden; 
-    }
-
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -111,7 +114,7 @@ main {
     background-color: #ffffff;
     border-radius: 10px;
     max-width: 350px;
-    max-height: 300px;
+    min-height: 300px;
     padding-bottom: 10px;
     margin-bottom: 30px;
     margin-left: 60px;
@@ -121,13 +124,14 @@ main {
 }
 .info {
     padding-left: 15px;
-    padding-right: 45px;
+    padding-right: 55px;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
-    max-width: 230px;
-    margin-top: 2px;
+    max-width: 180px;
+    margin-top: 10px;
     margin-bottom: 5px;
+    
 }
 
 img {max-height: 250px; width: 100%;}
@@ -183,7 +187,7 @@ content: cover;}
 
 
 
-.modal {
+.modal, .modal1 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -204,6 +208,7 @@ content: cover;}
   border: 1px solid #888;
   width: 35%;
   height: 470px;
+  min-height: fit-content;
   text-align: center;
   border-radius: 10px;
 }
@@ -277,3 +282,101 @@ a:visited {
   text-decoration: none; color: white;}
 
 
+
+
+.course-list {
+  /* стили для карточки */
+}
+
+.settings-btn {
+display: flex;
+margin-left: 70%;
+  height: 30px;
+  width: 30%;
+  
+  
+ align-items: center;
+  justify-content: center ;
+ margin-top: 10px;
+ margin-bottom: 10px;
+  background-color: #fffdfd;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  
+}
+
+.settings-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: #080808;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-card {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.course-card h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.foto {
+  text-align: center;
+  
+}
+
+.foto img {
+  width: 100%; height: 250px; 
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  margin-bottom: 10px;
+}

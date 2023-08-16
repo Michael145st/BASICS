@@ -4,115 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="images/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lobster+Two&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lobster+Two&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header class="header">
         <div class="logo">
-            <a href=""><h3>Course Planet</h3></a>
+            <a href="#"><h3>Course Planet</h3></a>
         </div>
         <div class="nav">
             <button class="btn-nav1">Your Homepage</button>
             <button class="btn-nav2" id="createBtn">Create Course</button>
             <button class="btn-nav3">Login</button>
         </div>
-
-
-</head>
-<body>
-
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div id="close" class="modal-close">&times;</div>
-      <div class="modal-card">
-        <div><h4 class="create1">CREATE NEW COURSE</h4></div>
-        <h2 class="tit">Course Title</h2>
-        <input type="text" placeholder="Name" id="courseTitle">
-        
-        <h2 class="tit">Course Description</h2>
-        <input type="text" placeholder="Info" id="courseDescription">
-        
-        <h2 class="tit">Course Bild</h2>
-        <input type="text" placeholder="Link" id="courseBild">
-        
-        <button class="CREATE" id="submitBtn">CREATE</button>
-      </div>
-    </div>
-  </div>
-
     </header>
+
     <main>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div id="close" class="modal-close">&times;</div>
+                <div class="modal-card">
+                    <h4 class="create1">CREATE NEW COURSE</h4>
+                    <h2 class="tit">Course Title</h2>
+                    <input type="text" placeholder="Name" id="courseTitle">
+                    <h2 class="tit">Course Description</h2>
+                    <input type="text" placeholder="Info" id="courseDescription">
+                    <h2 class="tit">Course Bild</h2>
+                    <input type="text" placeholder="Link" id="courseBild">
+                    <button class="CREATE" id="save-btn">CREATE</button>
+                </div>
+            </div>
         </div>
-      </div>
-        <div class="title"><h4>My Published Courses</h4></div>
+
+        <div class="title">
+            <h4>My Published Courses</h4>
+        </div>
         <div class="course-list" id="courseCardsContainer">
+            <div class="course-card">
                 <div class="foto"><img src="images/cours1.png" alt=""></div>
-                <div class="info"><h2>DevOps</h2>
-                <p>DevOps is a methodology in the softwa...</p></div>
+                <div class="info">
+                    <h2>DevOps</h2>
+                    <p>DevOps is a methodology in t<br></p>.
+                </div>
+                <button class="settings-btn">Настройки</button>
             </div>
-         
         </div>
-               
 
-        <div class="empty-Courses">
-
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <div id="close" class="modal-close">&times;</div>
+                <div class="modal-card">
+                    <h4 class="create1">CREATE NEW COURSE</h4>
+                    <h2 class="tit">Course Title</h2>
+                    <input type="text" placeholder="Name" id="courseTitle">
+                    <h2 class="tit">Course Description</h2>
+                    <input type="text" placeholder="Info" id="courseDescription">
+                    <h2 class="tit">Course Bild</h2>
+                    <input type="text" placeholder="Link" id="courseBild">
+                    <button class="CREATE" id="submitBtn">CREATE</button>
+                </div>
+            </div>
         </div>
-        
- 
+
+        <div class="empty-Courses"></div>
     </main>
-    
+
     <footer class="footer">
-            <div class="contacts">
-                <div class="con"><a href=""><img src="images/facebook.png" alt=""></a></div>
-                <div class="con"><a href=""><img src="images/inst.png" alt=""></a></div>
-                <div class="con"><a href=""><img src="images/twitter.png" alt=""></a></div>
+        <div class="contacts">
+            <div class="con"><a href="#"><img src="images/facebook.png" alt=""></a></div>
+            <div class="con"><a href="#"><img src="images/inst.png" alt=""></a></div>
+            <div class="con"><a href="#"><img src="images/twitter.png" alt=""></a></div>
+        </div>
+        <div class="footer-links">
+            <div class="ul-f">
+                <h1>Company</h1>
+                <ul>
+                    <a href="#"> <li>About us</li></a>
+                    <a href="#"> <li>News</li></a>
+                    <a href="#"><li>Careers</li></a>
+                    <a href="#">  <li>How we work</li></a>
+                </ul>
             </div>
-            <div class="footer-links">
-                <div class="ul-f">
-                 <h1>Company</h1>
-                 <ul>
-                   <a href="#"> <li>About us</li></a>
-                   <a href="#"> <li>News</li></a>
-                   <a href="#"><li>Careers</li></a>
-                   <a href="#">  <li>How we work</li></a>
-                </ul>
-                  </div>
 
-               <div class="ul-f">
-                 <h1>Support</h1>
-                 <ul>
-                   <a href="#"> <li>FAQ</li></a>
-                   <a href="#"> <li>US Office</li></a>
-                   <a href="#"> <li>Asia Office</li></a>
-                   <a href="#"> <li>Help Center</li></a>
+            <div class="ul-f">
+                <h1>Support</h1>
+                <ul>
+                    <a href="#"> <li>FAQ</li></a>
+                    <a href="#"> <li>US Office</li></a>
+                    <a href="#"> <li>Asia Office</li></a>
+                    <a href="#"> <li>Help Center</li></a>
                 </ul>
-                  </div>
-
-                   <div class="ul-f">
-                 <h1>More</h1>
-                 <ul>
-                   <a href="#"> <li>Become a partner</li></a>
-                   <a href="#"> <li>Partner Support</li></a>
-                   <a href="#"><li>Driver Requirements</li></a>
-                </ul>
-                  </div>
-
-                   <div class="ul-f">
-                 <h1>App</h1>
-                 <ul>
-                   <a href="#"> <li>Report Bug</li></a>
-                   <a href="#"> <li>App Helpdesk</li></a>
-                   <a href="#"><li>Mobile app links</li></a>
-                </ul>
-                  </div>
             </div>
-        </footer>
-        <script src = "js/JavaScript.js":></script> 
+
+            <div class="ul-f">
+                <h1>More</h1>
+                <ul>
+                    <a href="#"> <li>Become a partner</li></a>
+                    <a href="#"> <li>Partner Support</li></a>
+                    <a href="#"><li>Driver Requirements</li></a>
+                </ul>
+            </div>
+
+            <div class="ul-f">
+                <h1>App</h1>
+                <ul>
+                    <a href="#"> <li>Report Bug</li></a>
+                    <a href="#"> <li>App Helpdesk</li></a>
+                    <a href="#"><li>Mobile app links</li></a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/JavaScript.js"></script>
 </body>
 </html>
