@@ -1,141 +1,175 @@
-// Function for the GET method
-function getCourseData() {
-	fetch('https://60a3d1917c6e8b0017e27fad.mockapi.io/api/v1/food')
-		.then(response => response.json())
-		.then(data => {
-			displayCourseData(data) // show the course information
-		})
-		.catch(error => {
-			console.error('error:', error)
-		})
+const apiUrl = 'https://60a3d1917c6e8b0017e27fad.mockapi.io/api/v1/food'
+const courseCardsContainer = document.getElementById('courseCardsContainer')
+const modal = document.getElementById('modal')
+const modalConfirm = document.getElementById('modalConfirm')
+const createBtn = document.getElementById('createBtn')
+const deleteBtn = document.getElementById('deleteBtn')
+const closeButton = modal.querySelector('.modal-close')
+const closeButtonConfirm = modalConfirm.querySelector('.modal-close')
+const confirmButton = document.getElementById('confirmDeleteBtn')
+const cancelButton = document.getElementById('cancelDeleteBtn')
+
+function fetchJson(url, options) {
+	return fetch(url, options).then(response => response.json())
 }
 
-// Function to display the course data
+function getCourseData() {
+	fetchJson(apiUrl)
+		.then(displayCourseData)
+		.catch(error => console.error('Error fetching data:', error))
+}
+
 function displayCourseData(courseData) {
-	const courseCardsContainer = document.getElementById('courseCardsContainer')
-	courseCardsContainer.classList.add('course-list')
-
-	// Clear the container before adding new cards
 	courseCardsContainer.innerHTML = ''
-
-	// Create course card for each element from the .JSON
 	courseData.forEach(course => {
-		const courseCard = document.createElement('div')
-		courseCard.classList.add('course-card')
-
-		const courseFoto = document.createElement('div')
-		courseFoto.classList.add('foto')
-
-		const courseImage = document.createElement('img')
-		courseImage.src = course.image
-		courseImage.alt = course.title
-		courseFoto.appendChild(courseImage)
-
-		const courseSet = document.createElement('button')
-		courseSet.classList.add('settings-btn')
-		courseSet.textContent = 'CHANGE'
-		courseSet.addEventListener('click', function () {
-			openModal(course)
-		})
-
-		const courseInfo = document.createElement('div')
-		courseInfo.classList.add('info')
-
-		const courseTitle = document.createElement('h2')
-		courseTitle.textContent = course.title
-		courseInfo.appendChild(courseTitle)
-
-		const courseDescription = document.createElement('p')
-		courseDescription.textContent = course.description
-		courseInfo.appendChild(courseDescription)
-
-		courseCard.appendChild(courseFoto)
-		courseCard.appendChild(courseInfo)
-		courseCard.appendChild(courseSet)
-
+		const courseCard = createCourseCard(course)
 		courseCardsContainer.appendChild(courseCard)
 	})
+	updateDeleteButtonVisibility()
 }
 
-// Open the modal window
-function openModal(course) {
-	const modal = document.getElementById('modal')
-	const closeButton = document.querySelector('.modal-close')
-	const saveButton = document.getElementById('save-btn')
-	const field1 = document.getElementById('courseTitle')
-	const field2 = document.getElementById('courseDescription')
-	const field3 = document.getElementById('courseBild')
-	const modalTitle = document.querySelector('.create1')
+function createCourseCard(course) {
+	const courseCard = document.createElement('div')
+	courseCard.className = 'course-card'
+	courseCard.dataset.id = course.id
 
-	field1.value = course ? course.title : ''
-	field2.value = course ? course.description : ''
-	field3.value = course ? course.image : ''
-	modalTitle.textContent = course ? 'CHANGE COURSE' : 'CREATE NEW COURSE'
-	saveButton.textContent = course ? 'CHANGE' : 'CREATE'
+	const courseFoto = document.createElement('div')
+	courseFoto.className = 'foto'
+	const courseImage = document.createElement('img')
+	courseImage.src = course.image
+	courseImage.alt = course.title
+	courseFoto.appendChild(courseImage)
+
+	const courseSet = document.createElement('button')
+	courseSet.className = 'settings-btn'
+	courseSet.textContent = 'CHANGE'
+	courseSet.addEventListener('click', () => openModal(course))
+
+	const courseInfo = document.createElement('div')
+	courseInfo.className = 'info'
+	courseInfo.innerHTML = `<h2>${course.title}</h2><p>${course.description}</p>`
+
+	courseCard.append(courseFoto, courseInfo, courseSet)
+	courseCard.addEventListener('click', handleCourseSelection)
+
+	return courseCard
+}
+
+function updateDeleteButtonVisibility() {
+	const selectedCourses = document.querySelectorAll('.course-card.selected')
+	const deleteButtonText =
+		selectedCourses.length === 1
+			? 'Delete'
+			: `Delete (${selectedCourses.length})`
+	deleteBtn.style.display = selectedCourses.length > 0 ? 'block' : 'none'
+	deleteBtn.textContent = deleteButtonText
+}
+
+let selectedCourseCard = null // Add a variable to keep track of the selected course card
+
+function openModal(course) {
+	selectedCourseCard = course // Store the selected course card
+
+	const saveButton = document.getElementById('save-btn')
+	const [field1, field2, field3] = [
+		'courseTitle',
+		'courseDescription',
+		'courseBild',
+	].map(id => document.getElementById(id))
+	const modalTitle = modal.querySelector('.create1')
+	const isEditMode = course !== null
+
+	field1.value = isEditMode ? course.title : ''
+	field2.value = isEditMode ? course.description : ''
+	field3.value = isEditMode ? course.image : ''
+	modalTitle.textContent = isEditMode ? 'CHANGE COURSE' : 'CREATE NEW COURSE'
+	saveButton.textContent = isEditMode ? 'CHANGE' : 'CREATE'
 
 	modal.style.display = 'block'
+	closeButton.onclick = closeModal
+	window.onclick = event => event.target === modal && closeModal()
 
-	closeButton.onclick = function () {
-		modal.style.display = 'none'
-	}
-
-	window.onclick = function (event) {
-		if (event.target === modal) {
-			modal.style.display = 'none'
-		}
-	}
-
-	saveButton.onclick = function () {
+	saveButton.onclick = () => {
 		const updatedCourse = {
 			title: field1.value,
 			description: field2.value,
 			image: field3.value,
 		}
-
 		const requestOptions = {
-			method: course ? 'PUT' : 'POST',
+			method: isEditMode ? 'PUT' : 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(updatedCourse),
 		}
+		const requestUrl = isEditMode
+			? `${apiUrl}/${selectedCourseCard.id}`
+			: apiUrl
 
-		const requestUrl = course
-			? `https://60a3d1917c6e8b0017e27fad.mockapi.io/api/v1/food/${course.id}`
-			: 'https://60a3d1917c6e8b0017e27fad.mockapi.io/api/v1/food'
-
-		fetch(requestUrl, requestOptions)
-			.then(response => response.json())
+		fetchJson(requestUrl, requestOptions)
 			.then(data => {
 				console.log(data)
-				modal.style.display = 'none'
+				closeModal()
 				getCourseData()
 			})
-			.catch(error => {
-				console.error('error:', error)
-			})
+			.catch(error => console.error('Error saving course:', error))
 	}
 }
 
-// Call the GET method
-getCourseData()
-
-const createBtn = document.getElementById('createBtn')
-const modal = document.getElementById('modal')
-const closeBtn = document.getElementById('close')
-
-
-// Open the modal window on click Create-Course
-createBtn.addEventListener('click', function () {
-	openModal(null)
-})
-
-// Close the modal window on click cross
-closeBtn.addEventListener('click', function () {
+function closeModal() {
 	modal.style.display = 'none'
-})
+	modalConfirm.style.display = 'none'
 
-// Close the modal window on click outside
-window.addEventListener('click', function (event) {
-	if (event.target === modal) {
-		modal.style.display = 'none'
+	if (selectedCourseCard) {
+		const selectedCard = document.querySelector(
+			`.course-card[data-id="${selectedCourseCard.id}"]`
+		)
+		if (selectedCard) {
+			selectedCard.classList.remove('selected')
+		}
+		selectedCourseCard = null
+	}
+}
+
+function handleCourseSelection(event) {
+	const courseCard = event.target.closest('.course-card')
+	if (courseCard) {
+		courseCard.classList.toggle('selected')
+		updateDeleteButtonVisibility()
+	}
+}
+
+function deleteSelectedCourses() {
+	const selectedCourses = document.querySelectorAll('.course-card.selected')
+	if (selectedCourses.length === 0) return
+	modalConfirm.style.display = 'block'
+	closeButtonConfirm.onclick = closeModal
+	confirmButton.onclick = () => {
+		modalConfirm.style.display = 'none'
+		selectedCourses.forEach(courseCard => {
+			deleteCourse(courseCard.dataset.id)
+		})
+	}
+}
+
+function deleteCourse(courseId) {
+	const requestUrl = `${apiUrl}/${courseId}`
+	const requestOptions = {
+		method: 'DELETE',
+		headers: { 'Content-Type': 'application/json' },
+	}
+	fetchJson(requestUrl, requestOptions)
+		.then(data => {
+			console.log('Course deleted:', data)
+			getCourseData()
+		})
+		.catch(error => console.error('Error deleting course:', error))
+}
+
+cancelButton.addEventListener('click', closeModal)
+createBtn.addEventListener('click', () => openModal(null))
+modalConfirm.addEventListener('click', event => {
+	if (event.target === modalConfirm) {
+		closeModal()
 	}
 })
+deleteBtn.addEventListener('click', deleteSelectedCourses)
+getCourseData()

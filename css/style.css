@@ -27,19 +27,21 @@ li {margin-bottom: 10px;}
 p {font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; margin: 1px;;} 
 header {
  display: flex;
-
+flex-wrap: wrap;
  align-items: center;
  justify-content: space-between;
  height: 10%;
- margin-bottom: 40px;
+ margin-bottom: 70px;
  position: static;
-margin-top: 20px;
+ top: 0;
+
  }
 
 .logo {
     text-decoration: none;
     margin-left: 3%;
     white-space: nowrap;
+    line-height: 1;
 
 }
 
@@ -47,12 +49,12 @@ margin-top: 20px;
     margin-right: 3%;
     justify-content: center;
     flex-wrap: nowrap;
-    
+    line-height: 0;
     
 }
 
 .btn-nav1 {
-    font-size: 1.5vw;
+    font-size: 15px;
     background-color: white;
     border: none;
     margin-right: 15px;
@@ -65,11 +67,11 @@ margin-top: 20px;
     border-color: #868686;
     margin-right: 30px;
     padding:5px;
-     font-size: 1.5vw;
+     
      padding: 15px;
 }
 .btn-nav2:hover {
-  background-color:rgb(241, 241, 241) ;
+  background-color:#16B77D; color: #ffffff;
 }
 
 .btn-nav3 {
@@ -79,15 +81,15 @@ margin-top: 20px;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
-     font-size: 1.5vw;
+     
      padding: 15px;
 }
 
 main {
     overflow-y: visible;
     align-content: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 7%;
     position: relative;
     
 }
@@ -95,7 +97,7 @@ main {
 .course-list {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top:20px;
     flex-wrap: wrap;
     
     
@@ -110,7 +112,7 @@ main {
     display: block;
     border-style: solid;
     border-color: #c1bcbc;
-    border-width: 1px;
+   
     background-color: #ffffff;
     border-radius: 10px;
     max-width: 350px;
@@ -118,7 +120,8 @@ main {
     padding-bottom: 10px;
     margin-bottom: 30px;
     margin-left: 60px;
-   
+    border-width: 2px;
+  border-color: #9f0000;
     
 
 }
@@ -148,7 +151,9 @@ background-color: black; color: white;
 height: min-content;
 padding-bottom: 30px;
 padding-top: 25px;
-position: relative
+position: relative;
+overflow: visible;
+height: min-content;
 }
 
 .contacts {
@@ -168,7 +173,7 @@ position: relative
     flex-wrap: wrap;
 }
 .title {margin-top: 1px; font-size: 50px;
-margin-left: 60px;}
+margin-left: 20px;}
 
 
 .ul-f {
@@ -248,6 +253,7 @@ content: cover;}
   background-color: #16B77D;
   color: white;
   border-radius: 5px;
+  margin-bottom: 20px;
   }
 
   .CREATE:hover {background-color: #15a570;
@@ -257,11 +263,12 @@ content: cover;}
   input {
     height: 30px;
     border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .tit {
     display: flex;
-    align-self: flex-start;
+    align-self: flыex-start;
     margin-left: 10%;
   }
 
@@ -284,9 +291,7 @@ a:visited {
 
 
 
-.course-list {
-  /* стили для карточки */
-}
+
 
 .settings-btn {
 display: flex;
@@ -301,7 +306,7 @@ margin-left: 70%;
  margin-bottom: 10px;
   background-color: #fffdfd;
   color: rgb(0, 0, 0);
-  border-radius: 15px;
+  border-radius: 10px;
   
 }
 
@@ -315,13 +320,29 @@ margin-left: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .course-card {
   width: 300px;
-  margin: 10px;
-  border: 1px solid #ccc;
+  margin: 8px;
+  border: 2px solid #ccc;
   padding: 10px;
+}
+
+.course-card:hover {
+  border: 2px solid #595959ae;
+}
+
+
+
+
+
+.selected {
+  background-color: #910e0ec1;
+  border-width: 2px;
+  border-color: #4a3535;
+  color: #ffffff;
 }
 
 .course-card h2 {
@@ -380,3 +401,149 @@ textarea {
   resize: none;
   margin-bottom: 10px;
 }
+
+.delete-btn {
+  display: none;
+  position: fixed;
+  margin: 15vh;
+  margin-left: 90%;
+  min-height: 40px;
+  width: min-content;
+  font-size: 15px;
+  font-weight: 800;
+  
+  line-height: 1.5;
+
+  align-items: center;
+  justify-content: center ;
+ margin-top: -30px;
+ margin-bottom: 10px;
+
+
+  background-color: #bb2727;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: #1f0101;
+border-width: 3px;
+border-color: #350404;
+
+
+  background-color: #bb2727;
+  color: rgb(255, 255, 255);
+ 
+ 
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+
+@media screen and (max-width: 1130px) and (min-width: 440px) 
+{
+  .delete-btn {
+  
+
+  display: none;
+  position: fixed;
+  margin: 15vh;
+  margin-left: 88%;
+  
+  width: min-content;
+  font-size: 12px;
+  font-weight: 800;
+  
+  line-height: 1.5;
+border-width: 3px;
+border-color: #350404;
+  align-items: center;
+  justify-content: center ;
+ margin-top: -30px;
+ box-shadow: #1f0101;
+
+
+
+  background-color: #bb2727;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  
+ 
+  
+}
+}
+
+@media screen and (max-width: 754px) and (min-width: 288px) {
+  .header {margin-top: 2%;
+    
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 140px;
+  }
+.title {display: flex; align-content: space-around;}
+  .logo {line-height: 0;}
+  footer {flex-direction: column;
+    padding-left: 20px;
+    width: 100dvw;
+    max-width: 90vw;
+    
+  }
+  co
+  .footer-links {flex-wrap: nowrap;}
+.course-list {
+  flex-direction: column;
+}
+  .course-card {
+    display: flex;
+  min-width: 70dvw;
+max-height: min-content;
+height: 12dvh;
+min-height: 12dvh;
+  margin: 12px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+img {max-height: 12dvh;}
+.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; margin: 5px;  bottom: 20px; position: relative; top: 15px; left: 0; align-content: left;}
+
+.info {}
+.foto {min-width: 100px; max-width: 25%;}
+
+.delete-btn {
+  
+
+  display: none;
+  position: fixed;
+ 
+  margin-left: 82%;
+  
+  width: min-content;
+  font-size: 12px;
+  font-weight: 800;
+  
+  line-height: 1.5;
+border-width: 3px;
+border-color: #350404;
+  align-items: center;
+  justify-content: center ;
+
+ box-shadow: #1f0101;
+
+
+
+  background-color: #bb2727;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  
+ 
+  
+}
+
+}
+
+@media screen and (max-width: 440px) and (min-width: 288px) {
+  .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw;} }
+
+
+
+
+
