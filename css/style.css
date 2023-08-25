@@ -513,11 +513,11 @@ min-height: min-content;
   justify-content: space-between;
 }
 
-img {max-height: 12dvh;}
+img {max-height: 10vh}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; margin: 5px;  bottom: 20px; position: relative; top: 15px; left: 0; align-content: left;}
 
 .info {}
-.foto {min-width: 12vw; max-width: 12vw; max-height: 12vh; min-height: 12vh;}
+.foto {min-width: 10vw; max-width: 10vw; max-height: 10vh; min-height: 10vh;}
 
 .delete-btn {
   
