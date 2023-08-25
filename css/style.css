@@ -483,7 +483,7 @@ border-color: #350404;
     
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-bottom: 140px;
+    margin-bottom: 170px;
   }
 .title {display: flex; align-content: space-around;}
   .logo {line-height: 0;}
@@ -505,8 +505,8 @@ border-color: #350404;
     display: flex;
   min-width: 70vw;
 max-height: min-content;
-height: 12vh;
-min-height: 12vh;
+
+min-height: min-content;
   margin: 12px;
   border: 2px solid #ccc;
   padding: 10px;
@@ -517,7 +517,7 @@ img {max-height: 12dvh;}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; margin: 5px;  bottom: 20px; position: relative; top: 15px; left: 0; align-content: left;}
 
 .info {}
-.foto {min-width: 100px; max-width: 25%;}
+.foto {min-width: 12vw; max-width: 12vw;}
 
 .delete-btn {
   
