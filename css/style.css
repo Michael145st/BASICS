@@ -559,7 +559,7 @@ border-color: #350404;
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
-.course-card {min-width: max-content; width: 80dvw;}
+
 body, main { max-width: 100dvw; width: 100dvw; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
 .settings-btn {position: right;}
