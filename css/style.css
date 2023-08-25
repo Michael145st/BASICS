@@ -329,6 +329,7 @@ margin-left: 70%;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 60px;
+  position: relative;
 }
 
 .course-card {
@@ -461,7 +462,7 @@ padding-bottom: 2px;
   
 
   display: none;
-  position: fixed;
+  position: sticky;
   margin: 15vh;
   margin-left: 88%;
   
@@ -540,7 +541,7 @@ img {max-height: 10vh}
   
 
   display: none;
-  position: fixed;
+  position: sticky;
  
   margin-left: 82%;
   
