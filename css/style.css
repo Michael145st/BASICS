@@ -416,7 +416,7 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   display: none;
-  position: fixed;
+  position: sticky;
   margin: 15vh;
   margin-left: 90%;
   min-height: 40px;
@@ -585,7 +585,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .info {max-width: 20dvw; width: 20dvw; }
 .footer {padding-left: 30px; padding-bottom: 15px;}
 .modal {overflow-y: hidden; overflow-x: hidden; margin-left: -1.5%;}
-.modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 20%; border-radius: 0;}
+.modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 25%; border-radius: 0;}
 .modal-close {margin-top: -60px;}
 }
 
