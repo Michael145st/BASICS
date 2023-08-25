@@ -562,9 +562,9 @@ border-color: #350404;
 
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
-.course-card {max-width: 40dvw; width: 40dvw;}
+.course-card {max-width: 30dvw; width: 30dvw;}
 .settings-btn {position: right; background-color: #9f0000;}
-.info {max-width: 20dvw; }
+.info {max-width: 10dvw; width: 10dvw; }
 .footer {padding-left: 30px;}
 }
 
