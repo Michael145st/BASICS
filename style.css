@@ -442,6 +442,8 @@ padding-top: 5px;
 padding-bottom: 5px;
 }
 
+.confirm-title{margin-bottom: 10%; padding-top: 10%;} .cont {margin-bottom: 40px;} 
+
 
 @media screen and (max-width: 1130px) and (min-width: 440px) 
 {
@@ -477,8 +479,8 @@ border-color: #350404;
 }
 
 @media screen and (max-width: 754px) and (min-width: 100px) {
-  .modal {min-height: 100dvh; height: 100dvh};
-  .modal-content {min-width: 100dvw; width:100dvw ; min-height: 100dvh; height: 100dvh; margin-top: 0; overflow-y: hidden;}
+  .modal { height: 100%};
+  .modal-content { height: 80%; width: 70%; overflow-y: hidden;}
   .header {margin-top: 2%;
     
     flex-direction: column;
@@ -496,7 +498,7 @@ border-color: #350404;
    
     
   }
-  
+  .CREATE {margin-bottom: 50px; margin-top: 15px; height: 60px;}
   .footer-links {flex-wrap: wrap; display: flex; width: 90%; padding-left: 10px;}
   .contacts {margin-left: 0; margin-top: 10px; margin-bottom: 15px;}
 .course-list {
@@ -514,6 +516,7 @@ min-height: min-content;
   justify-content: space-between;
  
 }
+.confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 
 img {max-height: 10vh}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 0px; align-content: left;}
@@ -558,7 +561,7 @@ border-color: #350404;
   h3 {font-size: 40px;}
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
   .btn-nav3 {padding-left: 10px; padding-right: 10px}
-.delete-btn  {font-size: 1.5vw ; margin-left: 83%; } 
+.delete-btn  {font-size: 1.5vw ; margin-left: 83%; margin-top: 50%;} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 100px; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
@@ -571,7 +574,14 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .info {max-width: 20dvw; width: 20dvw; }
 .footer {padding-left: 30px;}
 .modal {overflow-y: hidden;}
-.modal-content {min-width: 100dvw; width:100dvw ; min-height: 100dvh; height: 100dvh; overflow-x: hidden; overflow-y: hidden; margin-top: 0; margin-bottom: 0; border-radius: 0;}
+.modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 30%; border: 0;}
+.modal-close {margin-top: -60px;}
+}
+
+
+@media screen and (min-width: 1900px) {
+  .footer-links {justify-content: center;}
+  .ul-f {margin-right: 90px;}
 }
 
 
