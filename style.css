@@ -572,7 +572,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-card {max-width: 28vw; width: 28vw;}
 .settings-btn {position: right; }
 .info {max-width: 20dvw; width: 20dvw; }
-.footer {padding-left: 30px;}
+.footer {padding-left: 30px; padding-bottom: 15px;}
 .modal {overflow-y: hidden;}
 .modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 30%; border: 0;}
 .modal-close {margin-top: -60px;}
