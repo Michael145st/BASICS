@@ -564,7 +564,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
 .course-card {max-width: 40dvw; width: 40dvw;}
 .settings-btn {position: right; background-color: #9f0000;}
-.info {max-width: 35dvw; }
+.info {max-width: 20dvw; }
 .footer {padding-left: 30px;}
 }
 
