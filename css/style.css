@@ -560,9 +560,9 @@ border-color: #350404;
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 
-body, main { max-width: 100dvw; width: 100dvw; }
+body, main { max-width: 90dvw; width: 90dvw; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
-.course-card {max-width: 40dvw;}
+.course-card {max-width: 40dvw; width: 40dvw;}
 .settings-btn {position: right; background-color: #9f0000;}
 .info {max-width: 38dvw;}
 .footer {padding-left: 30px;}
