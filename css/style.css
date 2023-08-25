@@ -510,15 +510,16 @@ min-height: min-content;
   margin: 12px;
   border: 2px solid #ccc;
   padding: 10px;
-  justify-content: last baseline;
+  justify-content: space-between;
  
 }
 
 img {max-height: 10vh}
-.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; margin: 5px;  bottom: 20px; position: relative; top: 15px; left: 0; align-content: left;}
+.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: -3px; align-content: left;}
 
-.info {}
-.foto {min-width: 10vw; max-width: 10vw; max-height: 10vh; min-height: 10vh;}
+.info {position: absolute; padding-left: 15%;}
+.foto {min-width: 10vw; max-width: 10vw; max-height: 10vh; min-height: 10vh; position: left;}
+
 
 .delete-btn {
   
@@ -554,12 +555,14 @@ border-color: #350404;
 
 @media screen and (max-width: 440px) and (min-width: 288px) {
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 2.7vw;  padding: 10px;} 
-.delete-btn  {position: static;} 
+.delete-btn  {position: static; ;} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 .course-card {max-width: 70dw; width: 70dw;}
-body, main, .course-list { max-width: 100dw;}
+body, main { max-width: 100dvw; width: 100dvw; padding: 5px;}
+.course-list {padding-left: 0; padding-right: 5%;}
+.settings-btn {position: right;}
 }
 
 
