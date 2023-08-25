@@ -492,12 +492,13 @@ border-color: #350404;
    min-width: 80%;
    min-width: 80%;
    justify-content: center;
-   justify-items: center;
+   justify-items: center; padding: 10px;
+   
     
   }
   
-  .footer-links {flex-wrap: wrap;}
-  .contacts {margin-left: 15%; margin-bottom: 15px;}
+  .footer-links {flex-wrap: wrap; display: flex; width: 90%; padding-left: 10px;}
+  .contacts {margin-left: 25%; margin-bottom: 15px;}
 .course-list {
   flex-direction: column;
 }
@@ -520,7 +521,7 @@ img {max-height: 10vh}
 .info {position: absolute; padding-left: 15%;}
 .foto {min-width: 10vw; max-width: 10vw; max-height: 10vh; min-height: 10vh; position: left;}
 
-
+.logo {margin-bottom: 10px;}
 .delete-btn {
   
 
@@ -560,12 +561,12 @@ border-color: #350404;
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 .nav {font-weight: bolder;}
-.logo {font-size: 30px;}
+.logo {margin-bottom: 10px;}
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
 .course-card {max-width: 28vw; width: 28vw;}
 .settings-btn {position: right; }
-.info {max-width: 20dvw; width: 20dvw; }
+.info {max-width: 30dvw; width: 20dvw; }
 .footer {padding-left: 30px;}
 }
 
