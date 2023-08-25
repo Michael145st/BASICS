@@ -74,6 +74,12 @@ flex-wrap: wrap;
   background-color:#16B77D; color: #ffffff;
 }
 
+.confirm-btn {background-color: #9f0000; border-radius: 15px;
+      
+     padding: 15px; margin-right: 20px; color: white;}
+
+     .cancel-btn {border-radius: 15px; padding: 15px;} 
+
 .btn-nav3 {
     background-color: black;
     color: white;
@@ -471,6 +477,7 @@ border-color: #350404;
 }
 
 @media screen and (max-width: 754px) and (min-width: 288px) {
+  .modal-content {min-width: 80vw; min-height: 80vh;}
   .header {margin-top: 2%;
     
     flex-direction: column;
@@ -481,21 +488,24 @@ border-color: #350404;
   .logo {line-height: 0;}
   footer {flex-direction: column;
     padding-left: 20px;
-    width: 100dvw;
-    max-width: 90vw;
+   min-width: 80%;
+   min-width: 80%;
+   justify-content: center;
+   justify-items: center;
     
   }
   co
   .footer-links {flex-wrap: nowrap;}
+  .contacts {margin-left: 25%; margin-bottom: 15px;}
 .course-list {
   flex-direction: column;
 }
   .course-card {
     display: flex;
-  min-width: 70dvw;
+  min-width: 70vw;
 max-height: min-content;
 height: 12dvh;
-min-height: 12dvh;
+min-height: 12vh;
   margin: 12px;
   border: 2px solid #ccc;
   padding: 10px;
@@ -541,7 +551,11 @@ border-color: #350404;
 }
 
 @media screen and (max-width: 440px) and (min-width: 288px) {
-  .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw;} }
+  .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 2.7vw;  padding: 10px;} 
+.delete-btn  {position: static;} 
+.footer-links {justify-content: flex-start;}
+.ul-f {margin-right: 30px;}
+.header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} }
 
 
 

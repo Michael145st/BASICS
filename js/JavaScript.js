@@ -124,8 +124,10 @@ function closeModal() {
 		)
 		if (selectedCard) {
 			selectedCard.classList.remove('selected')
+
 		}
 		selectedCourseCard = null
+		deleteBtn.style.display = 'none'
 	}
 }
 
