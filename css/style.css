@@ -411,12 +411,16 @@ textarea {
 }
 
 .delete-btn {
+
+  background-image: url(../images/del.png);
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
   position: fixed;
   margin: 15vh;
   margin-left: 90%;
   min-height: 40px;
-  width: min-content;
+  width: 40px;
   font-size: 15px;
   font-weight: 800;
   
@@ -429,7 +433,7 @@ textarea {
 
 
   background-color: #bb2727;
-  color: rgb(255, 255, 255);
+  
   border-radius: 10px;
   box-shadow: #1f0101;
 border-width: 3px;
@@ -437,11 +441,11 @@ border-color: #350404;
 
 
   background-color: #bb2727;
-  color: rgb(255, 255, 255);
+  color: #000000;
  
  
 padding-top: 5px;
-padding-bottom: 5px;
+padding-bottom: 2px;
 }
 
 .delete-btn:hover {
@@ -461,7 +465,7 @@ padding-bottom: 5px;
   margin: 15vh;
   margin-left: 88%;
   
-  width: min-content;
+  
   font-size: 12px;
   font-weight: 800;
   
@@ -476,7 +480,7 @@ border-color: #350404;
 
 
   background-color: #bb2727;
-  color: rgb(255, 255, 255);
+
   border-radius: 10px;
   
  
@@ -540,7 +544,7 @@ img {max-height: 10vh}
  
   margin-left: 82%;
   
-  width: min-content;
+
   font-size: 12px;
   font-weight: 800;
   
@@ -555,7 +559,7 @@ border-color: #350404;
 
 
   background-color: #bb2727;
-  color: rgb(255, 255, 255);
+  color: black
   border-radius: 10px;
   
  
@@ -568,7 +572,7 @@ border-color: #350404;
   h3 {font-size: 40px;}
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
   .btn-nav3 {padding-left: 10px; padding-right: 10px}
-.delete-btn  {font-size: 1.5vw ; margin-left: 83%; margin-top: 50%;} 
+.delete-btn  {font-size: 3.5vw ; margin-left: 83%; margin-top: 50%; background-image: url(../images/del.png);} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 90px; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 

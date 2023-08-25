@@ -59,8 +59,8 @@ function updateDeleteButtonVisibility() {
 	const selectedCourses = document.querySelectorAll('.course-card.selected')
 	const deleteButtonText =
 		selectedCourses.length === 1
-			? 'Delete'
-			: `Delete (${selectedCourses.length})`
+			? ''
+			: `${selectedCourses.length}`
 	deleteBtn.style.display = selectedCourses.length > 0 ? 'block' : 'none'
 	deleteBtn.textContent = deleteButtonText
 }
