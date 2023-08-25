@@ -515,7 +515,7 @@ min-height: min-content;
 }
 
 img {max-height: 10vh}
-.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: -3px; align-content: left;}
+.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 0px; align-content: left;}
 
 .info {position: absolute; padding-left: 15%;}
 .foto {min-width: 10vw; max-width: 10vw; max-height: 10vh; min-height: 10vh; position: left;}
@@ -562,9 +562,9 @@ border-color: #350404;
 
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
-.course-card {max-width: 30dvw; width: 30dvw;}
+.course-card {max-width: 30vw; width: 30vw;}
 .settings-btn {position: right; background-color: #9f0000;}
-.info {max-width: 10dvw; width: 10dvw; }
+.info {max-width: 1dvw; width: 10dvw; }
 .footer {padding-left: 30px;}
 }
 
