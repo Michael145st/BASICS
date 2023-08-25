@@ -477,8 +477,8 @@ border-color: #350404;
 }
 
 @media screen and (max-width: 754px) and (min-width: 100px) {
-  .modal {min-height: 100vh};
-  .modal-content {min-width: 80vw; min-height: 70vh;}
+  .modal {min-height: 100dvh; height: 100dvh};
+  .modal-content {min-width: 90dvw; width:90dvw ; min-height: 90dvh; height: 90dvh; margin-top: 0;}
   .header {margin-top: 2%;
     
     flex-direction: column;
@@ -555,11 +555,13 @@ border-color: #350404;
 }
 
 @media screen and (max-width: 440px) and (min-width: 100px) {
-  .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 2.7vw;  padding: 10px;} 
+  h3 {font-size: 40px;}
+  .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
+  .btn-nav3 {padding-left: 10px; padding-right: 10px}
 .delete-btn  {font-size: 1.5vw ; margin-left: 83%; } 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
-.header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
+.header {margin-bottom: 100px; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 .nav {font-weight: bolder;}
 .logo {margin-bottom: 10px;}
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
@@ -568,6 +570,8 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .settings-btn {position: right; }
 .info {max-width: 20dvw; width: 20dvw; }
 .footer {padding-left: 30px;}
+.modal {overflow-y: hidden;}
+.modal-content {min-width: 90dvw; width:90dvw ; min-height: 100dvh; height: 100dvh; overflow-x: hidden; overflow-y: hidden; margin-top: 0; margin-bottom: 0; border-radius: 0;}
 }
 
 
