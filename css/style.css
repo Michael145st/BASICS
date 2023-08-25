@@ -477,7 +477,8 @@ border-color: #350404;
 }
 
 @media screen and (max-width: 754px) and (min-width: 288px) {
-  .modal-content {min-width: 80vw; min-height: 80vh;}
+  .modal {min-height: 100vh};
+  .modal-content {min-width: 80vw; min-height: 70vh;}
   .header {margin-top: 2%;
     
     flex-direction: column;
@@ -494,7 +495,7 @@ border-color: #350404;
    justify-items: center;
     
   }
-  co
+  
   .footer-links {flex-wrap: nowrap;}
   .contacts {margin-left: 25%; margin-bottom: 15px;}
 .course-list {
