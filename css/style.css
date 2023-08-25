@@ -510,7 +510,8 @@ min-height: min-content;
   margin: 12px;
   border: 2px solid #ccc;
   padding: 10px;
-  justify-content: space-between;
+  justify-content: last baseline;
+ 
 }
 
 img {max-height: 10vh}
@@ -556,7 +557,10 @@ border-color: #350404;
 .delete-btn  {position: static;} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
-.header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} }
+.header {margin-bottom: 115px;} .confirm-title{margin-bottom: 20%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
+.course-card {max-width: 70dw; width: 70dw;}
+.se
+}
 
 
 
