@@ -505,7 +505,7 @@ border-color: #350404;
     display: flex;
   min-width: 70vw;
 max-height: min-content;
-height: 12dvh;
+height: 12vh;
 min-height: 12vh;
   margin: 12px;
   border: 2px solid #ccc;
