@@ -122,10 +122,7 @@ function closeModal() {
 		const selectedCard = document.querySelector(
 			`.course-card[data-id="${selectedCourseCard.id}"]`
 		)
-		if (selectedCard) {
-			selectedCard.classList.remove('selected')
-
-		}
+		
 		selectedCourseCard = null
 		deleteBtn.style.display = 'none'
 	}
@@ -134,7 +131,7 @@ function closeModal() {
 function handleCourseSelection(event) {
 	const courseCard = event.target.closest('.course-card')
 	if (courseCard) {
-		
+		courseCard.classList.toggle('selected')
 		updateDeleteButtonVisibility()
 	}
 }
