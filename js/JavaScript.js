@@ -134,7 +134,7 @@ function closeModal() {
 function handleCourseSelection(event) {
 	const courseCard = event.target.closest('.course-card')
 	if (courseCard) {
-		courseCard.classList.toggle('selected')
+		
 		updateDeleteButtonVisibility()
 	}
 }
