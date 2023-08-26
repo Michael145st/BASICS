@@ -196,18 +196,19 @@ margin-left: 20px;}
 }
 
 .foto {max-height: 250px;
-content: cover;}
+content: cover; } 
 
 
 
 .modal, .modal1 {
   display: none;
+ 
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 90vw;
+  height: 90vh;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -220,7 +221,7 @@ content: cover;}
   padding: 20px;
   border: 1px solid #888;
   width: 35%;
-  height: 470px;
+  height: 500px;
   min-height: fit-content;
   text-align: center;
   border-radius: 10px;
@@ -365,7 +366,7 @@ margin-left: 70%;
 }
 
 .foto img {
-  width: 100%; height: 250px; 
+  width: 100%; height: 250px; border-radius: 10px;
 }
 
 
@@ -377,13 +378,14 @@ margin-left: 70%;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
+  margin: 8% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
@@ -412,17 +414,17 @@ textarea {
 }
 
 .delete-btn {
-
+font-family: Arial, Helvetica, sans-serif;
   background-image: url(../images/del.png);
   background-repeat: no-repeat;
   background-position: center;
   display: none;
   position: fixed;
-  margin: 15vh;
+  margin: 12px;
   margin-left: 90%;
   min-height: 40px;
   width: 40px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 800;
   
   line-height: 1.5;
@@ -531,10 +533,10 @@ min-height: min-content;
 .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 
 img {max-height: 10vh}
-.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 0px; align-content: left;}
+.settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 15px; align-content: left;}
 
-.info {position: absolute; padding-left: 15%;}
-.foto {min-width: 10vw; max-width: 10vw; max-height: 10vh; min-height: 10vh; position: left;}
+.info {position: absolute; padding-left: 20%;}
+.foto {min-width: 15vw; max-width: 15vw; max-height: 10vh; min-height: 10vh; position: left;}
 
 .logo {margin-bottom: 10px;}
 .delete-btn {
@@ -544,7 +546,7 @@ img {max-height: 10vh}
   
  
   margin-left: 82%;
-  
+  margin-top: -12%;
 
   font-size: 12px;
   font-weight: 800;
@@ -573,7 +575,7 @@ border-color: #350404;
   h3 {font-size: 40px;}
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
   .btn-nav3 {padding-left: 10px; padding-right: 10px}
-.delete-btn  {font-size: 3.5vw ; margin-left: 83%; margin-top: 5%; background-image: url(../images/del.png); font-weight: 1000;} 
+.delete-btn  {font-size: 12px ; margin-left: 83%; margin-top: 5%; background-image: url(../images/del.png); font-weight: 1000; } 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
 .header {margin-bottom: 95px; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
