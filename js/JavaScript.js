@@ -122,7 +122,9 @@ function closeModal() {
 		const selectedCard = document.querySelector(
 			`.course-card[data-id="${selectedCourseCard.id}"]`
 		)
-		
+		if (selectedCard) {
+			selectedCard.classList.toggle('selected')}
+			
 		selectedCourseCard = null
 		deleteBtn.style.display = 'none'
 	}
