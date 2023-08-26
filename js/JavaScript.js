@@ -43,7 +43,10 @@ function createCourseCard(course) {
 	const courseSet = document.createElement('button')
 	courseSet.className = 'settings-btn'
 	courseSet.textContent = 'CHANGE'
-	courseSet.addEventListener('click', () => openModal(course))
+	courseSet.addEventListener('click', event => {
+		event.stopPropagation() // Prevent click event from propagating to parent div
+		openModal(course)
+	})
 
 	const courseInfo = document.createElement('div')
 	courseInfo.className = 'info'
@@ -58,17 +61,15 @@ function createCourseCard(course) {
 function updateDeleteButtonVisibility() {
 	const selectedCourses = document.querySelectorAll('.course-card.selected')
 	const deleteButtonText =
-		selectedCourses.length === 1
-			? ''
-			: `${selectedCourses.length}`
+		selectedCourses.length === 1 ? '' : `${selectedCourses.length}`
 	deleteBtn.style.display = selectedCourses.length > 0 ? 'block' : 'none'
 	deleteBtn.textContent = deleteButtonText
 }
 
-let selectedCourseCard = null // Add a variable to keep track of the selected course card
+let selectedCourseCard = null
 
 function openModal(course) {
-	selectedCourseCard = course // Store the selected course card
+	selectedCourseCard = course
 
 	const saveButton = document.getElementById('save-btn')
 	const [field1, field2, field3] = [
@@ -87,7 +88,7 @@ function openModal(course) {
 
 	modal.style.display = 'block'
 	closeButton.onclick = closeModal
-	window.onclick = event => event.target === modal && closeModal()
+	window.onclick = event => (event.target === modal ? closeModal() : null)
 
 	saveButton.onclick = () => {
 		const updatedCourse = {
@@ -123,10 +124,10 @@ function closeModal() {
 			`.course-card[data-id="${selectedCourseCard.id}"]`
 		)
 		if (selectedCard) {
-			selectedCard.classList.toggle('selected')}
+			selectedCard.classList.remove('selected')
+		}
 
 		selectedCourseCard = null
-		
 	}
 }
 
