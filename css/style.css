@@ -493,7 +493,7 @@ border-color: #350404;
 }
 }
 
-@media screen and (max-width: 754px) and (min-width: 100px) {
+@media screen and (max-width: 780px) and (min-width: 100px) {
   .modal { height: 100%};
   .modal-content { height: 80%; width: 70%; overflow-y: hidden;}
   .header {margin-top: 2%;
@@ -534,7 +534,7 @@ min-height: min-content;
 }
 .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 
-img {max-height: 10vh}
+img {max-height: 50px; max-width: 70px;}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 15px; align-content: left;}
 
 .info {position: absolute; margin-left: 18%; max-width: 140px; 
@@ -574,7 +574,7 @@ border-color: #350404;
 
 }
 
-@media screen and (max-width: 440px) and (min-width: 100px) {
+@media screen and (max-width: 500px) and (min-width: 100px) {
   h3 {font-size: 40px;}
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
   .btn-nav3 {padding-left: 10px; padding-right: 10px}
@@ -594,6 +594,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .modal {overflow-y: hidden; overflow-x: hidden; margin-left: -1.5%;}
 .modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 25%; border-radius: 0;}
 .modal-close {margin-top: -60px;}
+img {max-height: 50px; max-width: 70px;}
 }
 
 
