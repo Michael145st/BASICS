@@ -135,7 +135,7 @@ main {
 }
 .info {
     padding-left: 15px;
-    padding-right: 90px;
+    padding-right: 85px;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
@@ -537,7 +537,7 @@ min-height: min-content;
 img {max-height: 10vh}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 15px; align-content: left;}
 
-.info {position: absolute; margin-left: 2%;}
+.info {position: absolute; margin-left: 94px;}
 .foto {min-width: 15vw; max-width: 15vw; max-height: 10vh; min-height: 10vh; position: left;}
 
 .logo {margin-bottom: 10px;}
@@ -587,7 +587,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
 .course-card {max-width: 28vw; width: 28vw;}
 .settings-btn {position: right; }
-.info {max-width: 20dvw; width: 20dvw; padding-left: 55px;}
+.info {max-width: 20dvw; width: 20dvw; margin-left: 55px;}
 .footer {padding-left: 30px; padding-bottom: 15px;}
 .modal {overflow-y: hidden; overflow-x: hidden; margin-left: -1.5%;}
 .modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 25%; border-radius: 0;}
