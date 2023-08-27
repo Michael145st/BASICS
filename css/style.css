@@ -31,11 +31,11 @@ flex-wrap: wrap;
  align-items: center;
  justify-content: space-between;
  
-padding-bottom: 5dvh;
+padding-bottom: 20px;
  
  position: static;
- top: 0;
- max-height: 100px;
+ margin-top: 10px;
+ max-height: 130px;
 
  }
 
@@ -51,6 +51,7 @@ padding-bottom: 5dvh;
     margin-right: 3%;
     justify-content: center;
     flex-wrap: nowrap;
+    white-space: nowrap;
     line-height: 0;
     
 }
@@ -206,7 +207,7 @@ content: cover; }
   display: none;
  
   position: fixed;
-  z-index: 1;
+  z-index: +2;
   left: 0;
   top: 0;
   width: 90vw;
@@ -227,6 +228,8 @@ content: cover; }
   min-height: fit-content;
   text-align: center;
   border-radius: 10px;
+  padding-top: 40px;
+  z-index: +2;
 }
 
 
@@ -247,6 +250,7 @@ content: cover; }
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 3%;
 }
 
 .modal-close:hover,
@@ -264,7 +268,7 @@ content: cover; }
   background-color: #16B77D;
   color: white;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   }
 
   .CREATE:hover {background-color: #15a570;
@@ -377,7 +381,7 @@ margin-left: 70%;
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: +2;
   left: 0;
   top: 0;
   width: 100%;
@@ -393,6 +397,7 @@ margin-left: 70%;
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
+  padding-top: 40px;
 }
 
 .close {
@@ -445,7 +450,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   box-shadow: #1f0101;
 border-width: 3px;
 border-color: #350404;
-
+ z-index: +1;
 
   background-color: #bb2727;
   color: #000000;
@@ -502,7 +507,7 @@ border-color: #350404;
     
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-bottom: 10dvh; max-height: 130px
+    margin-bottom: 50px; max-height: 130px
   }
 .title {display: flex; align-content: space-around;}
   .logo {line-height: 0;}
@@ -514,6 +519,7 @@ border-color: #350404;
    justify-items: center; padding: 10px;
    padding-left: 30px; padding-bottom: 15px;
    min-height: min-content;
+    z-index: +2;
     
   }
   .CREATE {margin-bottom: 50px; margin-top: 15px; height: 60px;}
@@ -536,7 +542,7 @@ min-height: min-content;
 }
 .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 
-img {max-height: 50px; max-width: 70px;}
+img {max-height: 55px; max-width: 70px;}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 15px; align-content: left;}
 
 .info {position: absolute; margin-left: 18%; max-width: 140px; 
@@ -563,7 +569,7 @@ border-color: #350404;
   justify-content: center ;
 
  box-shadow: #1f0101;
-
+width: 35px;
 
 
   background-color: #bb2727;
@@ -580,11 +586,12 @@ border-color: #350404;
   h3 {font-size: 40px;}
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
   .btn-nav3 {padding-left: 10px; padding-right: 10px}
-.delete-btn  {font-size: 12px ; margin-left: 83%; margin-top: 5%; background-image: url(../images/del.png); font-weight: 1000; z-index: +1;} 
+  .btn-nav2 {padding-left: 10px; padding-right: 10px}
+.delete-btn  {font-size: 12px ; margin-left: 83%; margin-top: 3%; background-image: url(../images/del.png); font-weight: 1000;} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
-.header {margin-bottom: 1dvh; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
-.nav {font-weight: bolder;}
+.header {margin-bottom: 1dvh; margin-left: 3px;margin-right: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
+.nav {font-weight: bolder;margin-right: 0;}
 .logo {margin-bottom: 5px;}
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .course-list {padding-left: 0; margin-right: 5%; margin-right: 10px;}
@@ -592,11 +599,11 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .settings-btn {position: right; }
 .info {  padding-left: 15px;
     padding-right: 25%; max-width: 120px; width: 70px; margin-left: 15%}
-.footer {padding-left: 30px; padding-bottom: 15px;}
+.footer {padding-left: 30px; padding-bottom: 15px; z-index: +2;}
 .modal { overflow-x: hidden; margin-left: -1.5%;}
 .modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 15%; border-radius: 0;}
-.modal-close {margin-top: -10px;}
-img {max-height: 50px; max-width: 70px;}
+.modal-close {margin-top: -10px; }
+img {max-height: 55px; max-width: 70px;}
 .title h4 { font-size: 7.5dvw;
  
 }
@@ -611,7 +618,7 @@ img {max-height: 50px; max-width: 70px;}
 
 
 
-@media screen and (max-height: 550px) and  (min-width: 700px) {
+@media screen and (max-height: 550px) and  (min-width: 550px) {
   .modal {overflow: auto;}
   
   

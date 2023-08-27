@@ -8,6 +8,7 @@ const closeButton = modal.querySelector('.modal-close')
 const closeButtonConfirm = modalConfirm.querySelector('.modal-close')
 const confirmButton = document.getElementById('confirmDeleteBtn')
 const cancelButton = document.getElementById('cancelDeleteBtn')
+const deleteButtonContainer = document.getElementById('deleteButtonContainer')
 
 function fetchJson(url, options) {
 	return fetch(url, options).then(response => response.json())
@@ -44,7 +45,7 @@ function createCourseCard(course) {
 	courseSet.className = 'settings-btn'
 	courseSet.textContent = 'CHANGE'
 	courseSet.addEventListener('click', event => {
-		event.stopPropagation() // Prevent click event from propagating to parent div
+		event.stopPropagation()
 		openModal(course)
 	})
 
@@ -64,6 +65,11 @@ function updateDeleteButtonVisibility() {
 		selectedCourses.length === 1 ? '' : `${selectedCourses.length}`
 	deleteBtn.style.display = selectedCourses.length > 0 ? 'block' : 'none'
 	deleteBtn.textContent = deleteButtonText
+
+	deleteButtonContainer.style.display =
+		selectedCourses.length > 0 && modal.style.display !== 'block'
+			? 'block'
+			: 'none'
 }
 
 let selectedCourseCard = null
@@ -129,6 +135,8 @@ function closeModal() {
 
 		selectedCourseCard = null
 	}
+
+	updateDeleteButtonVisibility()
 }
 
 function handleCourseSelection(event) {
