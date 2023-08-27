@@ -537,9 +537,9 @@ min-height: min-content;
 img {max-height: 10vh}
 .settings-btn {font-size: 1.5vw; max-width: min-content; min-width: min-content; ;   position: relative; top: -12px; right: 15px; align-content: left;}
 
-.info {position: absolute; margin-left: 15%; max-width: 140px; 
+.info {position: absolute; margin-left: 18%; max-width: 140px; 
     padding-right: 25%;}
-.foto {min-width: 15vw; max-width: 15vw; max-height: 10vh; min-height: 10vh; position: left;}
+.foto {min-width: 15vw; max-width: 15vw; max-height: 15vh; min-height: auto; position: left;}
 
 .logo {margin-bottom: 10px;}
 .delete-btn {
