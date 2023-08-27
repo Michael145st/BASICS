@@ -30,10 +30,12 @@ header {
 flex-wrap: wrap;
  align-items: center;
  justify-content: space-between;
- height: 10%;
- margin-bottom: 70px;
+ 
+padding-bottom: 5dvh;
+ 
  position: static;
  top: 0;
+ max-height: 100px;
 
  }
 
@@ -76,7 +78,7 @@ flex-wrap: wrap;
 
 .confirm-btn {background-color: #bb2727; border-radius: 15px;
       
-     padding: 15px; margin-right: 20px; color: white;}
+     padding: 15px; margin-right: 20px; color: white; margin-bottom: 15%;}
 
      .cancel-btn {border-radius: 15px; padding: 15px;} 
 
@@ -221,7 +223,7 @@ content: cover; }
   padding: 20px;
   border: 1px solid #888;
   width: 35%;
-  height: 500px;
+  height: min-content;
   min-height: fit-content;
   text-align: center;
   border-radius: 10px;
@@ -380,7 +382,7 @@ margin-left: 70%;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   
 }
@@ -493,14 +495,14 @@ border-color: #350404;
 }
 }
 
-@media screen and (max-width: 780px) and (min-width: 100px) {
+@media screen and (max-width: 764px) and (min-width: 100px) {
   .modal { height: 100%};
   .modal-content { height: 80%; width: 70%; overflow-y: hidden;}
-  .header {margin-top: 2%;
+  .header {
     
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-bottom: 170px;
+    margin-bottom: 10dvh; max-height: 130px
   }
 .title {display: flex; align-content: space-around;}
   .logo {line-height: 0;}
@@ -518,7 +520,7 @@ border-color: #350404;
   .footer-links {flex-wrap: wrap; display: flex; width: 90%; padding-left: 10px;}
   .contacts {margin-left: 0; margin-top: 10px; margin-bottom: 15px;}
 .course-list {
-  flex-direction: column;
+  flex-direction: column; width: 100%;
 }
   .course-card {
     display: flex;
@@ -578,10 +580,10 @@ border-color: #350404;
   h3 {font-size: 40px;}
   .btn-nav2, .btn-nav1, .btn-nav3 {font-size: 3vw; font-weight: 900;  padding: 3px; } 
   .btn-nav3 {padding-left: 10px; padding-right: 10px}
-.delete-btn  {font-size: 12px ; margin-left: 83%; margin-top: 5%; background-image: url(../images/del.png); font-weight: 1000; } 
+.delete-btn  {font-size: 12px ; margin-left: 83%; margin-top: 5%; background-image: url(../images/del.png); font-weight: 1000; z-index: +1;} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
-.header {margin-bottom: 95px; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
+.header {margin-bottom: 1dvh; margin-left: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 .nav {font-weight: bolder;}
 .logo {margin-bottom: 5px;}
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
@@ -591,11 +593,15 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .info {  padding-left: 15px;
     padding-right: 25%; max-width: 120px; width: 70px; margin-left: 15%}
 .footer {padding-left: 30px; padding-bottom: 15px;}
-.modal {overflow-y: hidden; overflow-x: hidden; margin-left: -1.5%;}
-.modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 25%; border-radius: 0;}
-.modal-close {margin-top: -60px;}
+.modal { overflow-x: hidden; margin-left: -1.5%;}
+.modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 15%; border-radius: 0;}
+.modal-close {margin-top: -10px;}
 img {max-height: 50px; max-width: 70px;}
+.title h4 { font-size: 7.5dvw;
+ 
 }
+}
+
 
 
 @media screen and (min-width: 1900px) {
@@ -605,5 +611,9 @@ img {max-height: 50px; max-width: 70px;}
 
 
 
-
+@media screen and (max-height: 550px) and  (min-width: 700px) {
+  .modal {overflow: auto;}
+  
+  
+}
 
