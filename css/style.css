@@ -590,7 +590,7 @@ width: 35px;
 .delete-btn  {font-size: 12px ; margin-left: 83%; margin-top: 3%; background-image: url(../images/del.png); font-weight: 1000;} 
 .footer-links {justify-content: flex-start;}
 .ul-f {margin-right: 30px;}
-.header {margin-bottom: 1dvh; margin-left: 3px;margin-right: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
+.header {margin-bottom: 15px; margin-left: 3px;margin-right: 3px;} .confirm-title{margin-bottom: 25%; padding-top: 20%;} .cont {margin-bottom: 40px;} 
 .nav {font-weight: bolder;margin-right: 0;}
 .logo {margin-bottom: 5px;}
 body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
@@ -604,7 +604,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 15%; border-radius: 0;}
 .modal-close {margin-top: -10px; }
 img {max-height: 55px; max-width: 70px;}
-.title h4 { font-size: 26px;
+.title h4 { font-size: 26px; margin-right: 10px;
  
 }
 }
