@@ -604,7 +604,7 @@ body, main { max-width: 100dvw; width: 100dvw; overflow-x: hidden; }
 .modal-content {width: 90%; height: 100%; margin-top: 0; padding-top: 15%; border-radius: 0;}
 .modal-close {margin-top: -10px; }
 img {max-height: 55px; max-width: 70px;}
-.title h4 { font-size: 7.5vw;
+.title h4 { font-size: 26px;
  
 }
 }
