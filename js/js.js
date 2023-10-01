@@ -45,70 +45,8 @@ navButtons.forEach((button, index) => {
 })
 
 
-console.log("Script is running")
-    // Идентификаторы вашего Contentful пространства и токен доступа
-    const spaceId = 'fana5mnl0cnv';
-    const accessToken = 'TWhWFg5LrI4Bt_hL0hN6FWUrXwuo5QRSMFXw2tzikuI';
 
-    // Создаем клиент Contentful
-    const client = contentful.createClient({
-        space: spaceId,
-        accessToken: accessToken
-    });
 
-    // ...
-
-// Функция для загрузки и отображения контента
-function loadContent() {
-    client.getEntries()
-        .then((response) => { 
-            console.log(response);
-            // Получаем записи (контент) из Contentful
-            const projects = response.items;
-
-            // Получаем контейнер для проектов
-            const container = document.querySelector('.portfolio-nav-container');
-
-            // Очищаем контейнер
-            container.innerHTML = '';
-
-            // Отображаем каждый проект
-            projects.forEach((project) => {
-                const projectDiv = document.createElement('div');
-                projectDiv.classList.add('portfolio-nav');
-
-                // Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
-                const image = project.fields.image;
-
-                // Проверка на наличие изображения перед его использованием
-                if (image && image.fields && image.fields.file && image.fields.file.url) {
-                    const imageUrl = image.fields.file.url;
-
-                    // Создаем HTML для проекта (подставьте свои поля из Contentful)
-                    projectDiv.innerHTML = `
-                        <div class="background">
-                            <img src="${imageUrl}" alt="${project.fields.title}">
-                        </div>
-                        <div class="onhover">
-                            <h1 class="title">${project.fields.title}</h1>
-                            <p class="description">${project.fields.description}</p>
-                            <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
-                        </div>
-                    `;
-
-                    // Добавляем проект в контейнер
-                    container.appendChild(projectDiv);
-                }
-            });
-        })
-        .catch(console.error);
-}
-
-// ...
-
-    // Загружаем контент при загрузке страницы
-    loadContent();
-</script>
 
 // Получаем кнопку "Show my skills" и элемент секции skill-container
 const showSkillsButton = document.querySelector('.skills')
@@ -334,6 +272,80 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', updateScrollbarColor)
 	updateScrollbarColor() // Обновляем цвет дорожки скроллбара при загрузке страницы
 })
+
+
+console.log('Script is running')
+
+
+// Идентификаторы вашего Contentful пространства и токен доступа
+const spaceId = 'fana5mnl0cnv'
+const accessToken = 'TWhWFg5LrI4Bt_hL0hN6FWUrXwuo5QRSMFXw2tzikuI'
+
+// Создаем клиент Contentful
+const contentful = require('contentful')
+const client = contentful.createClient({
+	space: spaceId,
+	accessToken: accessToken,
+})
+
+// ...
+
+// Функция для загрузки и отображения контента
+function loadContent() {
+	client
+		.getEntries()
+		.then(response => {
+			console.log(response)
+			// Получаем записи (контент) из Contentful
+			const projects = response.items
+
+			// Получаем контейнер для проектов
+			const container = document.querySelector('.portfolio-nav-container')
+
+			// Очищаем контейнер
+			container.innerHTML = ''
+
+			// Отображаем каждый проект
+			projects.forEach(project => {
+				const projectDiv = document.createElement('div')
+				projectDiv.classList.add('portfolio-nav')
+
+				// Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
+				const image = project.fields.image
+
+				// Проверка на наличие изображения перед его использованием
+				if (
+					image &&
+					image.fields &&
+					image.fields.file &&
+					image.fields.file.url
+				) {
+					const imageUrl = image.fields.file.url
+
+					// Создаем HTML для проекта (подставьте свои поля из Contentful)
+					projectDiv.innerHTML = `
+                        <div class="background">
+                            <img src="${imageUrl}" alt="${project.fields.title}">
+                        </div>
+                        <div class="onhover">
+                            <h1 class="title">${project.fields.title}</h1>
+                            <p class="description">${project.fields.description}</p>
+                            <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
+                        </div>
+                    `
+
+					// Добавляем проект в контейнер
+					container.appendChild(projectDiv)
+				}
+			})
+		})
+		.catch(console.error)
+}
+
+// ...
+
+// Загружаем контент при загрузке страницы
+loadContent()
 
 const portfolioItems = document.querySelectorAll('.portfolio-nav')
 
