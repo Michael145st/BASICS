@@ -295,23 +295,23 @@ function loadContent() {
 	client
 		.getEntries()
 		.then(response => {
-			console.log(response)
+			console.log(response);
 			// Получаем записи (контент) из Contentful
-			const projects = response.items
+			const projects = response.items;
 
 			// Получаем контейнер для проектов
-			const container = document.querySelector('.portfolio-nav-container')
+			const container = document.querySelector('.portfolio-nav-container');
 
 			// Очищаем контейнер
-			container.innerHTML = ''
+			container.innerHTML = '';
 
 			// Отображаем каждый проект
 			projects.forEach(project => {
-				const projectDiv = document.createElement('div')
-				projectDiv.classList.add('portfolio-nav')
+				const projectDiv = document.createElement('div');
+				projectDiv.classList.add('portfolio-nav');
 
 				// Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
-				const image = project.fields.image
+				const image = project.fields.image;
 
 				// Проверка на наличие изображения перед его использованием
 				if (
@@ -320,7 +320,7 @@ function loadContent() {
 					image.fields.file &&
 					image.fields.file.url
 				) {
-					const imageUrl = image.fields.file.url
+					const imageUrl = image.fields.file.url;
 
 					// Создаем HTML для проекта (подставьте свои поля из Contentful)
 					projectDiv.innerHTML = `
@@ -332,38 +332,39 @@ function loadContent() {
                             <p class="description">${project.fields.description}</p>
                             <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
                         </div>
-                    `
+                    `;
 
 					// Добавляем проект в контейнер
-					container.appendChild(projectDiv)
+					container.appendChild(projectDiv);
+
+					// Добавляем обработчик события клика для каждой карточки
+					projectDiv.addEventListener('click', () => {
+						// Проверяем, есть ли класс "open" у текущей карточки
+						const isOpen = projectDiv.classList.contains('open');
+
+						// Удаляем класс "open" у всех карточек
+						projects.forEach(item => {
+							item.classList.remove('open');
+						});
+
+						// Если класс "open" не был у текущей карточки, добавляем его
+						if (!isOpen) {
+							projectDiv.classList.add('open');
+						}
+					});
 				}
-			})
+			});
 		})
-		.catch(console.error)
+		.catch(console.error);
 }
 
-// ...
-
 // Загружаем контент при загрузке страницы
-loadContent()
+document.addEventListener('DOMContentLoaded', () => {
+  loadContent();
+});
 
 
 
-// Добавляем обработчик события клика для каждой карточки
-projects.forEach(item => {
-	item.addEventListener('click', () => {
-		// Проверяем, есть ли класс "open" у текущей карточки
-		const isOpen = item.classList.contains('open')
 
-		// Удаляем класс "open" у всех карточек
-		projectDivs.forEach(item => {
-			item.classList.remove('open')
-		})
 
-		// Если класс "open" не был у текущей карточки, добавляем его
-		if (!isOpen) {
-			item.classList.add('open')
-		}
-	})
-})
 
