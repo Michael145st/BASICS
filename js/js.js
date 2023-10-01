@@ -347,16 +347,16 @@ function loadContent() {
 // Загружаем контент при загрузке страницы
 loadContent()
 
-const portfolioItems = document.querySelectorAll('.portfolio-nav')
+
 
 // Добавляем обработчик события клика для каждой карточки
-portfolioItems.forEach(item => {
+projects.forEach(item => {
 	item.addEventListener('click', () => {
 		// Проверяем, есть ли класс "open" у текущей карточки
 		const isOpen = item.classList.contains('open')
 
 		// Удаляем класс "open" у всех карточек
-		portfolioItems.forEach(item => {
+		projectDivs.forEach(item => {
 			item.classList.remove('open')
 		})
 
@@ -364,16 +364,6 @@ portfolioItems.forEach(item => {
 		if (!isOpen) {
 			item.classList.add('open')
 		}
-	})
-})
-
-portfolioItems.forEach(item => {
-	item.addEventListener('click', () => {
-		console.log('Клик по элементу')
-		const isOpen = item.classList.contains('open')
-		console.log(`Класс "open" присутствует: ${isOpen}`)
-
-		// ... ваш код для добавления/удаления класса "open"
 	})
 })
 
