@@ -195,13 +195,10 @@ function loadContent() {
             // Отображаем каждый проект
             projects.forEach((project) => {
                 const projectDiv = document.createElement('div');
-                projectDiv.classList.add('project');
+                projectDiv.classList.add('portfolio-nav');
 
                 // Используйте правильное имя поля (например, "image") в соответствии с вашей моделью данных Contentful
                 const image = project.fields.image;
-                const title = project.fields.title;
-                const description = project.fields.description;
-                const link = project.fields.link;
 
                 // Проверка на наличие изображения перед его использованием
                 if (image && image.fields && image.fields.file && image.fields.file.url) {
@@ -210,12 +207,12 @@ function loadContent() {
                     // Создаем HTML для проекта (подставьте свои поля из Contentful)
                     projectDiv.innerHTML = `
                         <div class="background">
-                            <img src="${imageUrl}" alt="${title}">
+                            <img src="${imageUrl}" alt="${project.fields.title}">
                         </div>
                         <div class="onhover">
-                            <h1 class="title">${title}</h1>
-                            <p class="description">${description}</p>
-                            <button><a href="${link}" target="_blank"><h2>Öffnen</h2></a></button>
+                            <h1 class="title">${project.fields.title}</h1>
+                            <p class="description">${project.fields.description}</p>
+                            <button><a href="${project.fields.link}" target="_blank">Открыть</a></button>
                         </div>
                     `;
 
@@ -226,8 +223,6 @@ function loadContent() {
         })
         .catch(console.error);
 }
-
-// ...
 
 // ...
 
