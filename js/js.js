@@ -366,3 +366,14 @@ portfolioItems.forEach(item => {
 		}
 	})
 })
+
+portfolioItems.forEach(item => {
+	item.addEventListener('click', () => {
+		console.log('Клик по элементу')
+		const isOpen = item.classList.contains('open')
+		console.log(`Класс "open" присутствует: ${isOpen}`)
+
+		// ... ваш код для добавления/удаления класса "open"
+	})
+})
+
